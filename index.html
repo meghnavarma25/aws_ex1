@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: rgb(176, 148, 174);
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="greeting">Hello, World!</h1>
+
+    <input type="text" id="userInput" placeholder="Type your greeting here" />
+    <button onclick="updateGreeting()">Change Greeting</button>
+
+    <script>
+        function updateGreeting() {
+            const input = document.getElementById('userInput').value;
+            const greeting = document.getElementById('greeting');
+            greeting.innerText = input ? input : 'Hello, World!';
+        }
+    </script>
+
+</body>
+</html>
